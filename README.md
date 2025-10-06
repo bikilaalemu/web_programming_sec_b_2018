@@ -1,4 +1,4 @@
-# Welcome to Web Programming
+## Welcome to Web Programming Lab Example Files
 * This is a repository to keep lab practical example files and
 * Enable students get the example files anytime
 * It also enables students to add their own exercise files 
