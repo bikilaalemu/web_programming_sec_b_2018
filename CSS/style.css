@@ -1,0 +1,22 @@
+/* Your style definitions appear below */
+body{
+    background-color: rgb(129, 168, 155);
+    color: darkblue;
+    font-size:14px;
+}
+
+form{
+    background-color: white;
+    margin:50px 100px 100px 100px;
+    padding: 50px;
+}
+input{
+    display: block;
+    margin:5px 0; 
+}
+input[type="submit"],input[type="reset"]{
+    display:inline;
+    background-color: blue;
+    color:white;
+    border-color:blue;
+}
