@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1</title>
+    <style>
+        body{
+            background-color: azure;
+            background-image: url('grad.jpg');
+            color:white
+        }
+        form{
+            background-color: black;
+            margin:100px 500px 200px 300px;
+            padding: 50px;
+            opacity: 0.75;
+        }
+        input{
+            display:block;
+            margin:5px 0;
+            border:0;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-bottom-color: black;
+        }
+        input[type="submit"]{
+            background-color: blue;
+            color: white;
+        }
+        div input[type="checkbox"]{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="un">Username</label>
+        <input type="text" name="un" id="un" placeholder="Username">
+
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw" placeholder="Password">
+       
+        <div>
+            <input type="checkbox" name="remember" id="remember" value="1">
+            <label for="remember">Remember Me</label>
+        </div>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
