@@ -10,6 +10,7 @@
     Type checking
         isNaN()
         isInteger()
+        typeof
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +20,23 @@
     <title>JS Numbers</title>
 </head>
 <body>
-    
+    <h1>JS Numbers </h1>
+    <script>
+        var result1=5/2;
+        var result2=7/3;
+        document.write(result1.toString());
+        document.write("<br>");
+        document.write(result2.toFixed(2));
+        let x=5, y=6;
+        let sum=0; 
+        x=x.toString();
+        sum=Number(x)+y;
+        document.write("<br>");
+        document.write(sum);
+         document.write("<br>");
+        document.write(isNaN(x));
+        document.write("<br>");
+        document.write(typeof x);
+    </script>
 </body>
 </html>

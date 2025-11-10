@@ -2,7 +2,7 @@
     document.write(msg)
     alert(msg)
     prompt(msg) returns string
-    confirm(msg) returns true/false
+    confirm(msg) returns boolean
     console.log(msg)
    -->
 <!DOCTYPE html>
@@ -14,6 +14,16 @@
 </head>
 <body>
     <h1>Displaying Messages in JS</h1>
-   
+    <script>
+        document.write("Hello there?");//displays message in the html document body
+        alert("How are you today?");//pop up
+        var name=prompt("What is our name?");//pop up
+        alert(name);
+        var check=confirm("Are you sure?");
+        alert(check);
+        console.log("Lets play hide and seek.");
+        console.log("Can you see me?");
+        console.error("Is this an error?");
+    </script>
 </body>
 </html>
