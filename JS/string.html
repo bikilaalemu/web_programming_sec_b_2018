@@ -13,6 +13,46 @@
     <title>String Operations</title>
  </head>
  <body>
-    
+    <script>
+      var firstname="meaza";
+      var middlename="tadesse";
+      var lastname="biru";
+      var fullname=firstname.concat(" ",middlename).concat(" ",lastname);
+      document.write(fullname);
+      document.write("<br>");
+      document.write(firstname.length);
+       document.write("<br>");
+        document.write(firstname[0]);
+       document.write("<br>");
+       var email="meaza@gmail.com";
+       document.write(email.indexOf('@'));
+       document.write("<br>");
+       var file="chapter4.theory.pptx";
+       document.write(file.lastIndexOf('.'));
+       document.write(file.endsWith(".pptx"));
+       document.write("<br>");
+       //charAt(0)  means character at index 0 ,  [0]
+       var initials=firstname.charAt(0)+middlename.charAt(0)+lastname.charAt(0);
+       document.write(initials.toUpperCase());
+       //extracting string from string 
+       var x=initials.substring(0,1);
+       document.write("<br>"+x); 
+       var y=initials.slice(1,3);
+       document.write("<br>"+y);
+       var test="Tilahun Gessese";
+       //output the firstname only from above string
+      var fn=test.substring(0,test.indexOf(" "));
+      document.write("<br>"+fn);
+      //output lastname from above string
+      var ln=test.slice(test.indexOf(" ")+1);
+      document.write("<br>"+ln);
+      //spliting string
+      var test="This is javascript practice. Always Practice Practice Practice, Bye!";
+      var test2=test.split(" ");//splits the test string using space
+      document.write("<br>Displaying splitted values...<br>")
+      for(var i=0;i<test2.length;i++){
+           document.write(test2[i]+"<br>");
+      }
+    </script>
  </body>
  </html>
