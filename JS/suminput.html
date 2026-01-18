@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise solution</title>
+</head>
+<body>
+    <h2>Sum of integer numbers demo</h2>
+    <h3 id="inputs">Array entries are:</h3>
+    <button onclick="sumInput()">Click To Check</button>
+    <script>
+        function sumInput(){
+            const inputs=[];
+            var sum=0;
+            while(true){
+                var input=Number(prompt("Enter a numeric value:"));
+                if(isNaN(input)){
+                    break;
+                }
+                else{
+                    inputs.push(input);
+                }
+            }
+            for(let i of inputs){
+                sum+=i;
+            }
+            alert("Sum="+sum);
+           document.getElementById('inputs').innerHTML+=inputs.flat();
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body onload="changeCSS()">
+    <form action="" method="post">
+       Value1: <input type="text" name="var1" id="v1"><br>
+       Value2: <input type="text" name="var2" id="v2"><br>
+        <input onclick="calculate()" type="button" value="Calculate"> <br>
+        <span id="result"></span>
+    </form>
+    <script>
+        function changeCSS(){
+            const obj=document.querySelector("input[type='button']");
+            obj.style.backgroundColor='blue';
+            obj.style.color='white';
+        }
+        function calculate(){
+            const obj1=document.getElementById('v1');
+            const obj2=document.getElementById('v2');
+            const res=document.getElementById('result');
+            //formula
+            var sum=0;
+            sum=Number(obj1.value)+Number(obj2.value);
+            //assign to span element
+            res.innerHTML="Sum="+sum;
+        }
+    </script>
+</body>
+</html>

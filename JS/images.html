@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            vertical-align: middle;
+        }
+    </style>
+     <script>
+        const images=['images/a.jpg','images/b.jpg','images/c.jpg','images/d.jpg','images/e.jpg'];
+        var index=0;
+
+       
+        function show(){
+            const img=document.getElementById('image');
+            img.src=images[index];
+        }
+
+        function update(){ 
+            const pre=document.getElementById('prev');
+            const nex=document.getElementById('next');
+            pre.style.display=index==0?'none':'display:block';
+            nex.style.display=index==(images.length-1)?'none':'display:block';
+            if(index>=0) {
+                nex.style.display='display:block';
+                index++;
+                show();
+            }
+            else if(index<=(images.length-1)){
+                pre.style.display='display:block';
+                index--;
+                show();
+            } 
+        }
+    </script>
+</head>
+<body onload="show()">
+    <div class="container">
+        <div><button onclick="update()" id="prev">&lt;</button></div>
+        <div><img src="" alt="Image" id="image" width="400" height="300"></div>
+        <div><button onclick="update()" id="next">&gt;</button></div>
+    </div>
+   
+</body>
+</html>

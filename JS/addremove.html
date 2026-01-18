@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or Remove Elements</title>
+    <style>
+        #header{
+            display:flex;
+            gap:200px;
+        }
+        #add{
+            background-color: blue;
+            color:white;
+            height: 40px;
+            margin-top:20px;
+            border-color: blue;
+        }
+    </style>
+    <script>
+        function addMember(){
+           const parent=document.getElementById('group');
+           const member=document.getElementsByClassName('members')[0]; 
+          //remove button
+           const removeButton=document.createElement("input");
+           removeButton.setAttribute('type','button'); 
+           removeButton.setAttribute('value','Remove');
+           removeButton.setAttribute('style',"background-color:red;color:white");
+          //new member
+            const div=document.createElement("div");
+            const label=document.createElement("label");
+            const input=document.createElement("input");
+
+            div.setAttribute("class","members");
+            label.textContent="Member Name";
+            input.setAttribute("type","text");
+            input.setAttribute("name","member_name[]");
+
+            div.append(label,input,removeButton);
+            removeButton.addEventListener('click',()=>{
+                div.remove();
+            })
+            parent.appendChild(div);
+
+
+           
+          
+          
+           
+           
+        
+
+            
+
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>Group Members</h1>
+        <button type="button" id="add" onclick="addMember()">Add Member</button>
+    </div>
+    <form action="" method="get">
+        <div id="group">
+            <div class="members">
+                <label for="member">Member Name</label>
+                <input type="text" name="member_name[]">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

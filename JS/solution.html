@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Solution</title>
+</head>
+<body>
+    <p>
+        A program reading numeric input and storing it inside an array.
+        Reading stops , if non-numeric number is entered. <br>
+        Finally, it displays the sum of the array items.
+    </p>
+    <button onclick="sumInput()">Check</button>
+    <h3 id="arr">The array elements=</h3>
+    <h3 id="res"></h3>
+    <script>
+        function sumInput(){
+            const inputs=[];
+            var sum=0;
+            const arr=document.getElementById('arr');
+            const res=document.getElementById('res');
+            while(true){
+                var input=Number(prompt("Enter a Numeric Value"));
+                if(!isNaN(input)){
+                    inputs.push(input);
+                    arr.innerHTML+=input+",";
+                } 
+                else break;
+            }
+            for(var elem of inputs){
+                sum+=elem;
+            }
+            var result="Sum of array elements="+sum;
+            res.innerHTML=result;
+        }
+    </script>
+</body>
+</html>

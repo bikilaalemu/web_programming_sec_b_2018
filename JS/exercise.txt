@@ -1,0 +1,6 @@
+Write the function sumInput() that:
+--------------------------------------
+Asks the user for values using prompt and 
+stores the values in the array.
+Finishes asking when the user enters a non-numeric value.
+Calculates and returns the sum of array items.
